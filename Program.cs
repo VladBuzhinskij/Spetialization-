@@ -33,3 +33,16 @@ String[] DeleteNullLine(String[] Array)
     }
     return Result;
 }
+
+
+
+Console.WriteLine("Введите массивы строк через запятую");
+String Input = Console.ReadLine();
+if (Input != null)
+{
+    String[] Array = Input.Split(',');
+    String[] InterimResult = SelectLine(Array);
+    String[] Result = DeleteNullLine(InterimResult);
+    for (int i = 0; i < Result.Length; i++) Console.Write($"{Result[i]}  ");
+}
+else Console.WriteLine("Ошибка");
