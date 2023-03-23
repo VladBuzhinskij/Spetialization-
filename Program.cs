@@ -1,4 +1,9 @@
-﻿String[] SelectLine(String[] Array)
+﻿/// <summary>
+/// Из массива строк, строки длинной меньше или равно трем, копирует в другой массив 
+/// </summary>
+/// <param name="Array">Входной массив</param>
+/// <returns>Результирующий массив</returns>
+String[] SelectLine(String[] Array)
 {
     Int32 j = 0;
     String[] Result = new String[Array.Length];
@@ -14,6 +19,12 @@
     }
     return Result;
 }
+/// <summary>
+/// Считает количество элементов массива не равное NULL, создает другой массив с 
+/// таким количеством элементов и переписывает в новый массив строки отличные от NULL
+/// </summary>
+/// <param name="Array">Входной массив</param>
+/// <returns>Массив без строк равных NULL</returns>
 String[] DeleteNullLine(String[] Array)
 {
     Int32 j = 0;
@@ -33,7 +44,6 @@ String[] DeleteNullLine(String[] Array)
     }
     return Result;
 }
-
 
 
 Console.WriteLine("Введите массивы строк через запятую");
